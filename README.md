@@ -2,21 +2,45 @@
 
 This repository contains a collection of Jupyter notebooks that serve as an introduction to the new alpha version of the pairinteraction library.
 
-To install the alpha version of the new pairinteraction version, you can run the following command:
+To install the alpha version of the new `pairinteraction-next` version, you can run the following command:
 
 ```bash
 pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pairinteraction-next
 ```
 
 Note this is currently only possible for python 3.9.
-We recommend using a virtual environment to install the package in a python 3.9 environment.
+We recommend using a virtual environment to install the package in a python 3.9 environment,
+e.g. you can use [uv](https://docs.astral.sh/uv/getting-started/installation/) (available for linux, mac and windows).
 
-E.g. you can install uv (see [here](https://docs.astral.sh/uv/getting-started/installation/)), and then create and activate a virtual environment with:
+Small examples of installing uv and creating a virtual environment with uv are given below:
 
+## Windows
+Install uv following the instructions on the [uv website](https://docs.astral.sh/uv/getting-started/installation/), i.e. run the following command in the powershell:
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+To have access to the `uv` command in the command prompt, you might have to restart your system, then create a virtual environment with the following command:
+```powershell
+uv venv example_venv --python=3.9
+```
+To now activate the virtual environment, you have to run the following commands in the powershell (the first command is necessary to allow activating the virtual environment):
+```powershell
+Set-ExecutionPolicy Unrestricted -Scope Process
+example_venv/Scripts/activate
+```
+Finally, you can install the package via:
+```powershell
+uv pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pairinteraction-next
+```
+
+## Linux / MacOS
+Install uv following the instructions on the [uv website](https://docs.astral.sh/uv/getting-started/installation/), i.e. run the following command in the terminal:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+Then run the following commands in the terminal to create and activate a virtual environment and install the package:
 ```bash
 uv venv example_venv --python=3.9
 . example_venv/bin/activate
 uv pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pairinteraction-next
 ```
-
-(For windows you might have to use `uv.exe` instead of `uv` or if you have installed uv via pip you can also run `python -m uv` instead of `uv`. Alternatively you can also use [conda](https://anaconda.org/anaconda/conda) to create a virtual environment).
