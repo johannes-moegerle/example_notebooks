@@ -2,10 +2,10 @@
 
 This repository contains a collection of Jupyter notebooks that serve as an introduction to the new alpha version of the pairinteraction library.
 
-To install the alpha version of the new `pairinteraction-next` version, you can run the following command:
+To install the alpha version of the new `pairinteraction` version, you can run the following command:
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pairinteraction-next
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pairinteraction
 ```
 
 We recommend using a virtual environment to install the package in a python environment (we support python 3.9 - 3.13),
@@ -29,7 +29,7 @@ example_venv/Scripts/activate
 ```
 Finally, you can install the package via:
 ```powershell
-uv pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pairinteraction-next
+uv pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pairinteraction
 ```
 
 ## Linux / MacOS
@@ -41,6 +41,6 @@ Then run the following commands in the terminal to create and activate a virtual
 ```bash
 uv venv example_venv
 . example_venv/bin/activate
-uv pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pairinteraction-next
+uv pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pairinteraction
 ```
 To create an environment with a specific python version, you can add e.g. the `--python=3.11` flag to the `uv venv` command.
